@@ -7,11 +7,14 @@ class Solution
 
     static void Main(String[] args)
     {
+    {
+        Console.WriteLine("Enter size of array and no. of left rotation");
         string[] tokens_n = Console.ReadLine().Split(' ');
         int n = Convert.ToInt32(tokens_n[0]);
         int k = Convert.ToInt32(tokens_n[1]);
+        Console.WriteLine("Enter Array Value ");
         string[] a_temp = Console.ReadLine().Split(' ');
-        int[] a = Array.ConvertAll(a_temp, Int32.Parse);
+
         string[] temp = new string[n];
         var rotationcount = k % n;
 
@@ -25,7 +28,7 @@ class Solution
             {
                 temp[n - rotationcount + i] = a_temp[i];
             }
-
+            Console.WriteLine("Result after "+ k.ToString()  +" left rotation");
             foreach (string s in temp)
                 Console.Write(s + " "); 
         }
